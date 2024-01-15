@@ -1,0 +1,104 @@
+Default Welcome Intent
+======================
+Text response:  Hello, How can I help you? You can say "New Order" or "Track Order" or "Store Hours"
+				Good day! What can I do for you today? You can say "New Order" or "Track Order" or "Store Hours"
+				Greetings! How can I assist? You can say "New Order" or "Track Order" or "Store Hours"
+
+				
+Default Fallback Intent
+========================
+Text Response: I didn't understand. You can say 'New Order' or 'Track Order' or 'Store Hours'. Also, in a new order, please mention only items from our available menu: Gulab Jamun, Kaju Katli, Kheer, Mysore Pak, Jalebi, Rasgulla, Kalakand, Besan Ladoo, Soan Papdi. Also specify a quantity for each item for example: "One kheer and 2 Mysore pak"				
+
+
+Intent= new.order
+=================
+new order
+Place new order
+
+	Text Response = 
+		Ok, starting a new order. You can say things like "I want two kalakand and one gulab jamun ". Make sure to specify a quantity for every food item! Also, we have only the following items on our menu: Gulab Jamun, Kaju Katli, Kheer, Mysore Pak, Jalebi, Rasgulla, Kalakand, Besan Ladoo, Soan Papdi.
+
+		Starting new order. Specify food items and quantities. For example, you can say, "I would like to order two kalakand and one gulab jamun. Also, we have only the following items on our menu:  Gulab Jamun, Kaju Katli, Kheer, Mysore Pak, Jalebi, Rasgulla, Kalakand, Besan Ladoo, Soan Papdi.
+
+Intent= order.add - context: ongoing-order
+==========================================
+Give me 2 packs of mysore pak, one besan laddo
+I'd like to order two packs of mysore pak,  one kalakand, and 3 rasgulla, please.
+Can you please get me two servings of mysore pak, one kalakand, and one rasgulla?
+Please prepare 2 portions of mysore pak, along with one gulab jamun and 1 beasn ladoo for me
+3 kheer, 2 jalebi, 1 kaju katli
+Can I get 2 packs of kaju katli, along with one gulab jamun and 1 jalebi ?
+I'll take 2 orders of kalakand, one besan ladoo, and 1 Soan papdi, if you don't mind
+I want 1 kaju , 2 rasgulla and one kheer, do it fast plz
+In addition, add 1 soan papdi and 2 kheer
+Moreover, include 2 gulab jamun 
+Also, please give me 2 besan ladoo
+Additionally, I'd like 2 jalebi.
+2 mysore pak and ok lets add one soan papdi too
+3 mysore pak
+Oh yes, add one kaju katli as well
+
+Intent= order.complete - context: ongoing-order
+==========================================
+Nope
+That's all I needed
+Done ordering it
+Place an order
+Done
+That's it
+
+Intent= order.remove - context: ongoing-order
+==========================================
+No kaju katli and kheer in my order. please remove.
+Kindly take rasgulla and gulab jamun off the order, please.
+I'd like to exclude besan ladoo and jalebi, please
+I no longer want the mysore pak in my order, please remove it
+Kindly exclude the kalakand from my order
+I would like to remove the rasgulla from my order
+Please take the besan ladoo off my order
+delete ladoo from my order
+hey, plz get rid of soan papdi and kheer
+I don't want kaju katli
+remove jalebi from my order
+can you remove gulab jamun?
+
+Intent= track.order
+===================
+
+check the status of my order
+track order
+track existing order
+
+Text response:
+	Definitely. What is your order id?
+	Sure. Please enter your order id.
+	Definitely. What is your order id?
+
+
+Intent= track.order - context: ongoing-tracking
+==================================================
+how about 32
+how about 40?
+here it is - 63321
+here you go: 123
+here is my order number 675
+id is 453
+here is my order id # 341
+7890
+123
+345
+
+Intent= store.hours
+==================================================
+store hours
+shore timings
+when does the store opens
+when does the store closes
+what is the closing time of store
+
+
+Text response:	Here are our store hours, Mon to Fri - 10 am to 10 and 
+		Sat , Sun - 10 am to 11:30 pm
+
+
+
